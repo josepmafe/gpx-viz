@@ -1,0 +1,37 @@
+[project]
+name = "gpx-viz"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+readme = "readme.md"
+requires-python = ">=3.13"
+dependencies = [
+    "gpxpy (>=1.6.2,<2.0.0)",
+    "streamlit (>=1.51.0,<2.0.0)",
+    "plotly (>=6.5.0,<7.0.0)",
+    "watchdog (>=6.0.0,<7.0.0)",
+    "ipywidgets (>=8.1.8,<9.0.0)",
+    "anywidget (>=0.9.21,<0.10.0)",
+    "streamlit-plotly-events (>=0.0.6,<0.0.7)",
+    "streamlit-plotly-mapbox-events (>=0.2.1,<0.3.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry]
+packages = [
+    { include = "app", from = "src" }
+]
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^7.1.0"
+nbformat = "^5.10.4"
+ruff = "^0.14.5"
+
